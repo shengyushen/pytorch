@@ -1852,7 +1852,7 @@ def embedding_bag(input, weight, offsets=None, max_norm=None, norm_type=2,
                                   "per_sample_weights is only supported for mode='sum' "
                                   "(got mode='{}'). Please open a feature request on GitHub."
                                   .format(mode))
-
+    # SSY /root/ssy/pytorch/aten/src/ATen/native/EmbeddingBag.cpp with lots of index_select
     ret, _, _, _ = torch.embedding_bag(
         weight,
         input,

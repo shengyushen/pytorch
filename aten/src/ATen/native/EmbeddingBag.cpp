@@ -357,6 +357,7 @@ embedding_bag(const Tensor &weight, const Tensor &indices,
               const int64_t mode, bool sparse,
               const Tensor &per_sample_weights,
               bool include_last_offset) {
+  // SSY _embedding_bag_cpu below
   return at::_embedding_bag(weight, indices.contiguous(), offsets.contiguous(),
                             scale_grad_by_freq, mode, sparse, per_sample_weights, include_last_offset);
   };

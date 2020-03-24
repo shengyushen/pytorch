@@ -279,6 +279,7 @@ class EmbeddingBag(Module):
 
     def forward(self, input, offsets=None, per_sample_weights=None):
         # type: (Tensor, Optional[Tensor], Optional[Tensor]) -> Tensor
+        # SSY /root/ssy/pytorch/torch/nn/functional.py
         return F.embedding_bag(input, self.weight, offsets,
                                self.max_norm, self.norm_type,
                                self.scale_grad_by_freq, self.mode, self.sparse,
